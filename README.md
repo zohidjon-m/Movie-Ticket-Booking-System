@@ -5,8 +5,7 @@ Name: Mahmudjonov Zohidjon Murodjon Ugli
 - Implementation: Use control statements (such as switch case) to present options to
 the user.
 2. Activity: Adding Movies to the Database
-- Implementation: Use structures to define a movie's properties (e.g., title, genre,
-duration) and dynamically allocate memory for storing multiple movie records.
+- Implementation: Use structures to define a movie's properties (e.g., title, genre, year, country) and dynamically allocate memory for storing multiple movie records, and use file handling to store data.
 3. Activity: Displaying Available Movies
 - Implementation: Utilize arrays (1D/2D) to store and display the list of available movies.
 4. Activity: Searching for a Movie
@@ -35,7 +34,7 @@ program.
 Admin: 1. can add Movies to the Database
        2. can display booked tickets
        3. can calculate total revenue
-       4. can generating Sales Report
+       4. can generate Sales Report
        5. can exit the program
 
 
@@ -46,4 +45,10 @@ User: 1. can displaying Available Movies
       5. can Exit the program
 
 
-admin.1. : There will be added movies, and admin will add movies to the new array and that array will be copied.
+Movie: Title, Year, Genre, Country, Price;
+     For example:
+        Title: "The Shawshank Redemption"
+        Year: 1994
+        Genre: Crime, Drama
+        Country: USA
+        Price: 5,000 won (KRW)
