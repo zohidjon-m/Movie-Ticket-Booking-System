@@ -52,3 +52,5 @@ Movie: Title, Year, Genre, Country, Price;
         Genre: Crime, Drama
         Country: USA
         Price: 5,000 won (KRW)
+
+user 
