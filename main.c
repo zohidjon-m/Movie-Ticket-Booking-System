@@ -24,7 +24,7 @@ int saveMoviesToFile(int n){
    FILE *savedMovies;
    savedMovies = fopen("movies_database.txt", "ab");
    if(savedMovies == NULL){
-      printf("Error has happened in saving movies, the file did not created.");
+      printf("Error has happened in saving movies, the file is not created.");
       exit(0);
    }
 
@@ -70,7 +70,7 @@ int displaySavedMoviesFromFile(){
   struct Movie movies[MAX_MOVIES];
   while(fread(&movies[i], sizeof(struct Movie), 1, savedMovies) != 0){
      i++;
-  } 
+  }      
   for (int j = 0; j < i ; ++j) {
        printf("Id: %d | Title: %s | Genre: %s | Year: %d | Country: %s | Price: %d \n", movies[j].id, movies[j].title, movies[j].genre, movies[j].year, movies[j].country, movies[j].price);
   }
@@ -87,7 +87,7 @@ int bookingTicket(int idMovie){
 
    int i = 0, j;
    struct Movie movies[MAX_MOVIES];
-   while(fread(&movies[i], sizeof(struct Movie), 1, savedMovies) != 0){
+   while(fread(&movies[i], sizeof(struct Movie), i, savedMovies) != 0){
      i++;
    } 
 
@@ -153,7 +153,7 @@ int bookingTicket(int idMovie){
    
    //getting User Data
    //if it is same, then i want to get an information of a user, and store it to the booked_movies.txt file, which I will create now   
-/**int bookMovieTicket(int bookMovie){
+int bookMovieTicket(int bookMovie){
    FILE *bookedTickets = fopen("booked_tickets.txt", "a");
     if(bookedTickets == NULL){
       printf("Error has happened while opening a file for booked movies!!!");
@@ -197,16 +197,17 @@ int bookingTicket(int idMovie){
    }else{
       printf("Invalid number is entered!");
       printf("Please, enter 1 to book a movie; 2 to if it is a wrong movie");
-   }**/
+   }
 
-  /** int displayBookedTickets(){
-    FILE *bookedTickets = fopen("booked_tickets.txt", "rb");
-    if(bookedTickets == NULL){
+   void displayBookedTickets(){
+      FILE *bookedTickets = fopen("booked_tickets.txt", "rb");
+      if(bookedTickets == NULL){
       printf("Error has happened while opening a file for booked movies!!!");
       exit(0);
+
     }
-   }**/
-   
+   }
+}
 
 
 
@@ -269,7 +270,7 @@ int main(){
 
       }else if(admin_menu == 2){
       //Display booked tickets
-      //displayBookedTickets();
+      displayBookedTickets();
       }else if(admin_menu == 3){
       //Calculate total revenue
 
