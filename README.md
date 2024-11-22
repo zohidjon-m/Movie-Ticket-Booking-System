@@ -1,6 +1,9 @@
 Project Idea: Movie Ticket Booking System
+
 ID: 23013058
+
 Name: Mahmudjonov Zohidjon Murodjon Ugli
+
 1. Activity: Displaying Main Menu
 - Implementation: Use control statements (such as switch case) to present options to
 the user.
