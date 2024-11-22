@@ -198,15 +198,6 @@ int bookMovieTicket(int bookMovie){
       printf("Invalid number is entered!");
       printf("Please, enter 1 to book a movie; 2 to if it is a wrong movie");
    }
-
-   void displayBookedTickets(){
-      FILE *bookedTickets = fopen("booked_tickets.txt", "rb");
-      if(bookedTickets == NULL){
-      printf("Error has happened while opening a file for booked movies!!!");
-      exit(0);
-
-    }
-   }
 }
 
 
