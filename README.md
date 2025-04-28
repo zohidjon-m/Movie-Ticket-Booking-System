@@ -21,9 +21,16 @@ This project was built to practice fundamental programming concepts such as file
 
 ## Output example
 Movie: Title, Year, Genre, Country, Price;
+
      For example:
+     
         Title: "The Shawshank Redemption"
+        
         Year: 1994
+        
         Genre: Crime, Drama
+        
         Country: USA
+        
         Price: 5,000 won (KRW)
+        
